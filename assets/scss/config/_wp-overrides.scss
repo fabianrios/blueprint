@@ -1,3 +1,11 @@
+.uppercase{
+  text-transform: uppercase;
+}
+
+.nm{
+  margin: 0;
+}
+
 .wp-caption{
   padding:rem-calc(4);
 }
@@ -10,4 +18,109 @@ p.wp-caption-text{
   font-size:90%;
   color: $charcoal;
   padding:rem-calc(10) 0;
+}
+
+
+.homefront{
+  position: relative;
+  display: block;
+  background: url(../images/home_mapa.jpg) no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  height: 830px;
+  h3{
+    text-transform: uppercase;
+    position: relative;
+    top: 600px;
+    color: #fff;
+  }
+}
+
+.fifty{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  &.original{
+    max-height: 715px;
+    overflow: hidden;
+  }
+  &.orangebg{
+    background: #f2b937;
+    padding: 30px;
+    color: #fff;
+    h4{
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  &.redbg{
+    background: #e84a3d;
+    padding: 30px;
+    color: #fff;
+    min-height: 360px;
+    h4{
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+
+.primer_texto{
+  font-size: .9em;
+}
+
+.row{
+  &.row-x{
+   min-width: 82.5rem; 
+  }
+}
+
+footer#footer{
+  padding: 50px 0;
+  background: black;
+  p{
+    color: #8d8d8d;
+    font-size: 13px;
+  }
+  a{
+    color: #fff;
+    font-size: 13px;
+  }
+  h6{
+    font-size: .9em;
+    color: #8d8d8d;
+  }
+}
+
+.info{
+  display: inline-block;
+  background: #1e2531;
+  padding: 50px 30px;
+  width: 30%;
+  h3{
+    color: #fff;
+    text-transform: uppercase;
+  }
+  p{
+    color: #818388;
+  }
+  ul{
+    li{
+      color: #818388;
+      padding: 20px 0;
+      border-bottom: 1px solid #353b46;
+    }
+  }
+}
+
+.map{
+  width: 70%;
+  float: right;
+  display: inline-block;
 }
