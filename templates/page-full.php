@@ -13,7 +13,12 @@ get_header(); ?>
   	<?php while ( have_posts() ) : the_post(); ?>
   	
   	<div class="row">
-  	  <div class="large-8 columns large-centered"><?php the_content(); ?></div>
+  	  <div class="large-8 columns large-centered">
+        <?php the_content(); ?>
+        <div class="text-center">
+          <img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow.png" alt="" />
+        </div>
+      </div>
   	</div>
     
   	<?php endwhile; // End the loop ?>
