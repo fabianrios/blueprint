@@ -120,7 +120,37 @@ footer#footer{
 }
 
 .map{
+  position: relative;
   width: 70%;
   float: right;
   display: inline-block;
+  overflow: hidden;
+  max-height: 681px;
+}
+
+.project-orbit{
+  min-height: 770px;
+}
+
+.galleries{
+  display: none;
+  position: relative;
+}
+
+.closing{
+  position: absolute;
+  background: #1e2531;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.orbit-container .orbit-slides-container img{
+  height: 100%;
 }

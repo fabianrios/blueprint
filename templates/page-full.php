@@ -108,11 +108,37 @@ get_header(); ?>
       <p>  Vestibulum sollicitudin pharetra congue. Sed felis tortor, faucibus quis tellus at, pharetra efficitur leo. Aenean arcu nisi, vehicula id diam a, volutpat iaculis orci. Sed porta felis nibh, eu tempus augue tempus sollicitudin. Donec bibendum pulvinar congue. Morbi ornare placerat maximus. Fusce nec ullamcorper tortor. Quisque sed lacus auctor, finibus massa non, commodo enim. Suspendisse egestas qodales aliquam rutrum. Nunc ut lorem non libero finibus tristique nec at sapien. Nulla bibendum dictum nunc, eu pretium nulla condimentum vel</p>
     </div>
     <div class="map">
-      <div id="googleMap" style="width:100%;height:680px;"></div>
+      <div id="googleMap" class="allofthem" style="width:100%;height:680px;"></div>
+      <?php $i = 0; ?>
+        <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
+          <div id="<?php echo $i ?>-gallery" class="galleries allofthem">
+            <a class="closing">X</a>
+            <ul class="project-orbit" data-orbit data-options="bullets:false;slide_number:false;timer:false;">
+            <li>
+              <img src="<?php echo get_field('image_1')['url'];  ?>" alt="" />
+            </li>
+            <li>
+              <img src="<?php echo get_field('image_2')['url'];  ?>" alt="" />
+            </li>
+            <li>
+              <img src="<?php echo get_field('image_3')['url'];  ?>" alt="" />
+            </li>
+            </ul>
+          </div>
+        <?php $i = $i+1; ?>
+      <?php endforeach; ?>
     </div>
   </div>
   
   <script>
+  $(function() {
+      $(".closing").click(function(e){
+        e.preventDefault();
+        $(".allofthem").hide("fast");
+        $("#googleMap").show();
+      });
+  });
+  
   var locations = new Array();
   locations = <?php echo $json_portfolio; ?>;
   console.log(locations, parseFloat(locations[0]["lat"]), parseFloat(locations[0]["long"]));
@@ -177,7 +203,7 @@ get_header(); ?>
       var infowindow = new google.maps.InfoWindow();
 
       var marker, i;
-      var image = 'images/beachflag.png';
+      var image = '<?php bloginfo('stylesheet_directory'); ?>/assets/images/icon.png';
 
       for (i = 0; i < locations.length; i++) {
         // console.log(locations[i][0]);
@@ -192,14 +218,16 @@ get_header(); ?>
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
             console.log(marker, i);
-            if (marker.getAnimation() !== null) {
-               marker.setAnimation(null);
-             } else {
-               marker.setAnimation(google.maps.Animation.BOUNCE);
-             }
-            var contentString = locations[i]["title"];
-            infowindow.setContent(contentString);
-            infowindow.open(map, marker);
+            $("#googleMap").hide("fast");
+            $("#"+i+"-gallery").show();
+            // if (marker.getAnimation() !== null) {
+            //    marker.setAnimation(null);
+            //  } else {
+            //    marker.setAnimation(google.maps.Animation.BOUNCE);
+            //  }
+            // var contentString = locations[i]["title"];
+            // infowindow.setContent(contentString);
+            // infowindow.open(map, marker);
           }
         })(marker, i));
       }
