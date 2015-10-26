@@ -56,6 +56,10 @@ get_header(); ?>
       <h4><?php the_field('segundo_titulo'); ?></h4>
       <div class="primer_texto">
         <?php the_field('segundo_texto'); ?>
+        <ul class="no-bullet socials">
+          <li><a class="twitter" href="#">twitter</a></li>
+          <li><a class="linkedin" href="#">linkedin</a></li>
+        </ul>
       </div>
     </div>
     <div class="fifty right">
