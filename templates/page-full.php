@@ -26,7 +26,7 @@ get_header(); ?>
   
   <div class="fifty original">
     <?php $image_medium = get_field('primera_imagen_mediana'); ?>
-    <img src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
+    <img  src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
     <div class="fifty">
       <?php $image_small = get_field('primera_imagen_pequena'); ?>
       <img src="<?php echo $image_small['url']; ?>" alt="<?php echo $image_small['alt']; ?>" />
@@ -89,7 +89,7 @@ get_header(); ?>
     <img src="<?php echo $image_big['url']; ?>" alt="<?php echo $image_big['alt']; ?>" />
   </div>
   
-  <div class="portfolio">
+  <div class="portfolio show-for-medium-up">
     <?php
         global $post;
         $args = array( 'numberposts' => 10, 'category_name' => 'portfolio' );
@@ -117,7 +117,7 @@ get_header(); ?>
       <p>  Vestibulum sollicitudin pharetra congue. Sed felis tortor, faucibus quis tellus at, pharetra efficitur leo. Aenean arcu nisi, vehicula id diam a, volutpat iaculis orci. Sed porta felis nibh, eu tempus augue tempus sollicitudin. Donec bibendum pulvinar congue. Morbi ornare placerat maximus. Fusce nec ullamcorper tortor. Quisque sed lacus auctor, finibus massa non, commodo enim. Suspendisse egestas qodales aliquam rutrum. Nunc ut lorem non libero finibus tristique nec at sapien. Nulla bibendum dictum nunc, eu pretium nulla condimentum vel</p>
     </div>
     <div class="map">
-      <div id="googleMap" class="allofthem" style="width:100%;height:680px;"></div>
+      <div id="googleMap" class="allofthem" style="width:100%;"></div>
       <?php $i = 0; ?>
         <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
           <div id="<?php echo $i ?>-gallery" class="galleries allofthem">
