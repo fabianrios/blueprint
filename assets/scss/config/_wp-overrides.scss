@@ -282,9 +282,31 @@ footer#footer{
 	background:#114f9c;
 	height: 62px;
 	margin: 0;
-	padding: 20px;
+	padding: 15px 20px;
 	@media only screen and (min-width: 40.063em) { 
 	display: none;
+	}
+}
+
+.reveal-modal{
+	&.blueish{
+		padding: 0;
+		background: rgba(17,79,156,.8);
+		ul{
+			display: block;
+			margin: 0;
+			text-align: center;
+			list-style-type: none;
+			li{
+				text-align: center;
+				display: block;
+				margin: 10px;
+				a{
+					color: #fff;
+					font-size: 27px;
+				}
+			}
+		}
 	}
 }
 
