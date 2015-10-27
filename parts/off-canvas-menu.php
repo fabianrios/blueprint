@@ -9,19 +9,26 @@
 
 ?>
 
-<nav class="tab-bar">
-  <section class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-small">
-    <a class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-toggle menu-icon" href="#"><span></span></a>
-  </section>
-  <section class="middle tab-bar-section">
+<div class="nav-header">
+	<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo_moviles.jpg" alt="" />
+	<a href="#" class="tree right" data-reveal-id="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/tree.jpg" alt="" /></a>
+</div>
 
-    <h1 class="title">
-      <?php bloginfo( 'name' ); ?>
-    </h1>
-
-  </section>
-</nav>
-
-<aside class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-menu" aria-hidden="true">
-    <?php foundationpress_mobile_off_canvas( apply_filters('filter_mobile_nav_position', 'mobile_nav_position') ); ?>
-</aside>
+<div id="menu" class="reveal-modal blueish" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+  <div class="nav-header">
+  	<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo_moviles.jpg" alt="" />
+  	<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+  </div>
+  
+  <ul>
+  	<li><a href="">STRATEGY</a></li>
+	<li><a href="">ABOUT US</a></li>
+	<li><a href="">CONTACT US</a></li>
+	<li><a href="">PORTFOLIO</a></li>
+  </ul>
+  <hr />
+  <ul>
+  	<li><a href="#">CLIENT LOGIN</a></li>
+  </ul>
+  
+</div>

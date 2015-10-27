@@ -24,16 +24,29 @@ p.wp-caption-text{
 .homefront{
   position: relative;
   display: block;
-  background: url(../images/home_mapa.jpg) no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
-  height: 830px;
+  background: url(../images/home_mapa.jpg) no-repeat center center;
+  height: 586px;
+  @media only screen and (min-width: 40.063em) { 
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	height: 830px;
+  }
   h3{
     text-transform: uppercase;
     position: relative;
-    top: 600px;
     color: #fff;
+	top: 400px;
+	@media only screen and (min-width: 40.063em) { 
+	    top: 600px;
+	}
   }
+}
+
+.trim-small{
+	display: none !important;
+	@media only screen and (min-width: 40.063em) { 
+		display: inline-block !important;
+	}
 }
 
 .fifty{
@@ -47,8 +60,10 @@ p.wp-caption-text{
 	  width: 50%;
   }
   &.original{
-    max-height: 725px;
-    overflow: hidden;
+	@media only screen and (min-width: 40.063em) { 
+	    max-height: 725px;
+	    overflow: hidden;
+	}
 	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
 		max-height: 750px;
 	}
@@ -64,14 +79,27 @@ p.wp-caption-text{
   }
   &.orangebg{
     background: #EEB911;
-    padding: 27px;
+    padding: 50px 40px;
     color: #fff;
-    min-height: 365px;
+    min-height: 465px;
     h4{
       color: #fff;
       text-transform: uppercase;
-      font-size: 20px;
+      font-size: 25px;
     }
+	.primer_texto{
+	  font-size: 1em;
+	}
+	@media only screen and (min-width: 40.063em) { 
+		padding: 27px;
+		min-height: 365px;
+		h4{
+			font-size: 20px;
+		}
+		.primer_texto{
+		  font-size: .9em;
+		}
+	}
 	@media only screen and (min-width: 90.063em) {
 	  padding: 30px;
 	  min-height: 400px;
@@ -86,31 +114,9 @@ p.wp-caption-text{
 		    font-size: 1em;
 		  }
 	} 
-  }
-  &.redbg{
-    background: #e84a3d;
-    padding: 27px;
-    color: #fff;
-    min-height: 365px;
-    h4{
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 20px;
+    &.redbg{
+      background: #e84a3d;
     }
-	@media only screen and (min-width: 90.063em) {
-	  padding: 30px;
-	  min-height: 400px;
-	}
-	@media only screen and (min-width: 1731px) {
-    	  padding: 40px;
-    	  min-height: 500px;
-    	  h4{
-    		  font-size: 25px;
-    	  }
-		  .primer_texto{
-		    font-size: 1em;
-		  }
-	}
   }
   img{
     width: 100%;
@@ -242,7 +248,10 @@ footer#footer{
 .arrow{
   text-transform: uppercase;
   position: relative;
-  top: 650px;
+  top: 420px;
+	@media only screen and (min-width: 40.063em) { 
+	    top: 650px;
+	}
 }
 
 .socials{
@@ -268,6 +277,17 @@ footer#footer{
   }
 }
 
+.nav-header{
+	display: block;
+	background:#114f9c;
+	height: 62px;
+	margin: 0;
+	padding: 20px;
+	@media only screen and (min-width: 40.063em) { 
+	display: none;
+	}
+}
+
 #googleMap{
 	height: 680px;
 	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
@@ -290,3 +310,7 @@ footer#footer{
 		background: #303435;
 	}
 } 
+
+.top-bar-container, .tab-bar{
+	margin-bottom: 0;
+}

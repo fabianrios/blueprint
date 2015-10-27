@@ -26,19 +26,19 @@ get_header(); ?>
   
   <div class="fifty original">
     <?php $image_medium = get_field('primera_imagen_mediana'); ?>
-    <img  src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
+    <img class="trim-small" src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
     <div class="fifty">
       <?php $image_small = get_field('primera_imagen_pequena'); ?>
       <img src="<?php echo $image_small['url']; ?>" alt="<?php echo $image_small['alt']; ?>" />
     </div>
-    <div class="fifty redbg right">
+    <div class="fifty orangebg redbg right">
       <h4><?php the_field('primer_titulo'); ?></h4>
       <div class="primer_texto">
         <?php the_field('primer_texto'); ?>
       </div>
     </div>
   </div>
-  <div class="fifty original right">
+  <div class="fifty original right trim-small">
     <?php $image_big = get_field('primera_imagen_grande'); ?>
     <img src="<?php echo $image_big['url']; ?>" alt="<?php echo $image_big['alt']; ?>" />
   </div>
@@ -51,7 +51,7 @@ get_header(); ?>
   </div>
   <div class="fifty original right">
     <?php $image_medium = get_field('segunda_imagen_mediana'); ?>
-    <img src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
+    <img class="trim-small" src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
     <div class="fifty orangebg">
       <h4><?php the_field('segundo_titulo'); ?></h4>
       <div class="primer_texto">
@@ -62,7 +62,7 @@ get_header(); ?>
         </ul>
       </div>
     </div>
-    <div class="fifty right">
+    <div class="fifty right trim-small">
       <?php $image_small = get_field('segunda_imagen_pequena'); ?>
       <img src="<?php echo $image_small['url']; ?>" alt="<?php echo $image_small['alt']; ?>" />
     </div>
@@ -72,24 +72,24 @@ get_header(); ?>
 
   <div class="fifty original">
     <?php $image_medium = get_field('tercera_imagen_mediana'); ?>
-    <img src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
+    <img class="trim-small" src="<?php echo $image_medium['url']; ?>" alt="<?php echo $image_medium['alt']; ?>" />
     <div class="fifty">
       <?php $image_small = get_field('tercera_imagen_pequena'); ?>
       <img src="<?php echo $image_small['url']; ?>" alt="<?php echo $image_small['alt']; ?>" />
     </div>
-    <div class="fifty redbg right">
+    <div class="fifty orangebg redbg right">
       <h4><?php the_field('tercer_titulo'); ?></h4>
       <div class="primer_texto">
         <?php the_field('tercer_texto'); ?>
       </div>
     </div>
   </div>
-  <div class="fifty original right">
+  <div class="fifty original right trim-small">
     <?php $image_big = get_field('tercera_imagen_grande'); ?>
     <img src="<?php echo $image_big['url']; ?>" alt="<?php echo $image_big['alt']; ?>" />
   </div>
   
-  <div class="portfolio show-for-medium-up">
+  <div class="portfolio trim-small">
     <?php
         global $post;
         $args = array( 'numberposts' => 10, 'category_name' => 'portfolio' );
