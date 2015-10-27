@@ -14,17 +14,25 @@
 <html class="no-js" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=1024 initial-scale=0.75 minimum-scale=1.0 maximum-scale=1.0">
 
 		<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-144x144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300' rel='stylesheet' type='text/css'>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+	    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300' rel='stylesheet' type='text/css'>
+	    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	    <script src="http://maps.googleapis.com/maps/api/js"></script>
+	    <script>
+	    var isiPhone = navigator.userAgent.toLowerCase().indexOf("iphone");
+	    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android");
 
+	    if(isiPhone > -1 || isAndroid > -1){
+	      $('meta[name=viewport]').attr('content','width=device-width, user-scalable=no');
+	      $("#viewport").attr("content", "width=device-width, user-scalable=no");
+	    }		
+	    </script>
 		<?php wp_head(); ?>
     
 	</head>

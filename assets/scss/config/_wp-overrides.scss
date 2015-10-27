@@ -39,13 +39,28 @@ p.wp-caption-text{
 .fifty{
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 100%;
   margin: 0;
   padding: 0;
   vertical-align: top;
+  @media only screen and (min-width: 40.063em) { 
+	  width: 50%;
+  }
   &.original{
     max-height: 725px;
     overflow: hidden;
+	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
+		max-height: 750px;
+	}
+	@media only screen and (min-width: 1640px) and (max-width: 1730px) {
+		max-height: 820px;
+	}
+	@media only screen and (min-width: 1731px) {
+		max-height: 900px;
+	}
+	@media only screen and (min-width: 117.063em) { 
+		max-height: 990px;
+	}
   }
   &.orangebg{
     background: #EEB911;
@@ -57,6 +72,20 @@ p.wp-caption-text{
       text-transform: uppercase;
       font-size: 20px;
     }
+	@media only screen and (min-width: 90.063em) {
+	  padding: 30px;
+	  min-height: 400px;
+	}
+	@media only screen and (min-width: 1731px) {
+    	  padding: 40px;
+    	  min-height: 500px;
+    	  h4{
+    		  font-size: 25px;
+    	  }
+		  .primer_texto{
+		    font-size: 1em;
+		  }
+	} 
   }
   &.redbg{
     background: #e84a3d;
@@ -68,6 +97,20 @@ p.wp-caption-text{
       text-transform: uppercase;
       font-size: 20px;
     }
+	@media only screen and (min-width: 90.063em) {
+	  padding: 30px;
+	  min-height: 400px;
+	}
+	@media only screen and (min-width: 1731px) {
+    	  padding: 40px;
+    	  min-height: 500px;
+    	  h4{
+    		  font-size: 25px;
+    	  }
+		  .primer_texto{
+		    font-size: 1em;
+		  }
+	}
   }
   img{
     width: 100%;
@@ -80,7 +123,7 @@ p.wp-caption-text{
 
 .row{
   &.row-x{
-   min-width: 82.5rem; 
+   min-width: 90.63rem; 
   }
 }
 
@@ -106,6 +149,19 @@ footer#footer{
   background: #1e2531;
   padding: 50px 30px;
   width: 30%;
+  min-height: 681px;
+  @media only screen and (min-width: 1472px) and (max-width: 1639px) {
+  	height: 750px;
+  }
+  @media only screen and (min-width: 1640px) and (max-width: 1730px) {
+  	height: 820px;
+  }
+  @media only screen and (min-width: 1731px) {
+  	height: 900px;
+  }
+  @media only screen and (min-width: 117.063em) { 
+  	height: 920px;
+  }
   h3{
     color: #fff;
     text-transform: uppercase;
@@ -128,11 +184,35 @@ footer#footer{
   float: right;
   display: inline-block;
   overflow: hidden;
-  max-height: 681px;
+  height: 681px;
+  @media only screen and (min-width: 1472px) and (max-width: 1639px) {
+  	height: 750px;
+  }
+  @media only screen and (min-width: 1640px) and (max-width: 1730px) {
+  	height: 820px;
+  }
+  @media only screen and (min-width: 1731px) {
+  	height: 900px;
+  }
+  @media only screen and (min-width: 117.063em) { 
+  	height: 920px;
+  }
 }
 
 .project-orbit{
-  min-height: 770px;
+  min-height: 720px !important;
+  @media only screen and (min-width: 1472px) and (max-width: 1639px) {
+  	height: 780px !important;
+  }
+  @media only screen and (min-width: 1640px) and (max-width: 1730px) {
+  	height: 850px !important;
+  }
+  @media only screen and (min-width: 1731px) {
+  	height: 950px !important;
+  }
+  @media only screen and (min-width: 117.063em) { 
+  	height: 1020px !important;
+  }
 }
 
 .galleries{
@@ -156,6 +236,7 @@ footer#footer{
 
 .orbit-container .orbit-slides-container img{
   height: 100%;
+  width: 100%;
 }
 
 .arrow{
@@ -181,8 +262,31 @@ footer#footer{
         background-position: 0 0;
       }
       &.linkedin{
-        background-position: 0 -56px;
+        background-position:-56px 0;
       }
     }
   }
 }
+
+#googleMap{
+	height: 680px;
+	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
+		height: 750px;
+	}
+	@media only screen and (min-width: 1640px) and (max-width: 1730px) {
+		height: 820px;
+	}
+	@media only screen and (min-width: 1731px) {
+		height: 900px;
+	}
+	@media only screen and (min-width: 117.063em) { 
+		height: 920px;
+	}
+}
+
+@media only screen and (min-width: 90.063em) {
+	html{
+		padding: 80px;
+		background: #303435;
+	}
+} 
