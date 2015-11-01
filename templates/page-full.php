@@ -125,12 +125,75 @@ get_header(); ?>
             <ul class="project-orbit" data-orbit data-options="bullets:false;slide_number:false;timer:false;">
             <li>
               <img src="<?php echo get_field('image_1')['url'];  ?>" alt="" />
+			  <div class="orbit-caption">
+				  <h6 class="whitetxt"><?php the_title(); ?></h6>
+				  <ul class="no-bullet">
+					  <li><strong>TYPE:</strong> <?php the_field('type'); ?></li>
+					  <li><strong>LOCATION:</strong> <?php the_field('location'); ?></li>
+					  <li><strong>FLOORS:</strong> <?php the_field('floors'); ?></li>
+					  <li><strong>UNITS:</strong> <?php the_field('units'); ?></li>
+					  <li><strong>SIZE:</strong> <?php the_field('size'); ?></li>
+					  <li><strong>STATUS:</strong> 
+						  <?php
+						    $status = get_field('status');
+							   if($status == 1){
+								   $output = "Active";
+							   }else{
+								   $output = "Finish";
+							   }
+							   echo $output;
+						   ?>
+					   </li>
+			      </ul>
+			  </div>
             </li>
             <li>
               <img src="<?php echo get_field('image_2')['url'];  ?>" alt="" />
+			  <div class="orbit-caption">
+				  <h6 class="whitetxt"><?php the_title(); ?></h6>
+				  <ul class="no-bullet">
+					  <li><strong>TYPE:</strong> <?php the_field('type'); ?></li>
+					  <li><strong>LOCATION:</strong> <?php the_field('location'); ?></li>
+					  <li><strong>FLOORS:</strong> <?php the_field('floors'); ?></li>
+					  <li><strong>UNITS:</strong> <?php the_field('units'); ?></li>
+					  <li><strong>SIZE:</strong> <?php the_field('size'); ?></li>
+					  <li><strong>STATUS:</strong> 
+						  <?php
+						    $status = get_field('status');
+							   if($status == 1){
+								   $output = "Active";
+							   }else{
+								   $output = "Finish";
+							   }
+							   echo $output;
+						   ?>
+					   </li>
+			      </ul>
+			  </div>
             </li>
             <li>
               <img src="<?php echo get_field('image_3')['url'];  ?>" alt="" />
+			  <div class="orbit-caption">
+				  <h6 class="whitetxt"><?php the_title(); ?></h6>
+				  <ul class="no-bullet">
+					  <li><strong>TYPE:</strong> <?php the_field('type'); ?></li>
+					  <li><strong>LOCATION:</strong> <?php the_field('location'); ?></li>
+					  <li><strong>FLOORS:</strong> <?php the_field('floors'); ?></li>
+					  <li><strong>UNITS:</strong> <?php the_field('units'); ?></li>
+					  <li><strong>SIZE:</strong> <?php the_field('size'); ?></li>
+					  <li><strong>STATUS:</strong> 
+						  <?php
+						    $status = get_field('status');
+							   if($status == 1){
+								   $output = "Active";
+							   }else{
+								   $output = "Finish";
+							   }
+							   echo $output;
+						   ?>
+					   </li>
+			      </ul>
+			  </div>
             </li>
             </ul>
           </div>

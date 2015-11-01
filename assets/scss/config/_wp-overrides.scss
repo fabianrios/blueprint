@@ -20,6 +20,10 @@ p.wp-caption-text{
   padding:rem-calc(10) 0;
 }
 
+.whitetxt{
+	color: #fff;
+}
+
 
 .homefront{
   position: relative;
@@ -335,4 +339,44 @@ footer#footer{
 
 .top-bar-container, .tab-bar{
 	margin-bottom: 0;
+}
+
+.orbit-container .orbit-slides-container>* .orbit-caption{
+    bottom: 40px !important;
+	padding: 30px !important;
+	left: 20px;
+    color: #fff;
+	width: auto !important;
+	max-width: 330px;
+}
+
+.orbit-container .orbit-prev{
+	left: auto !important;
+	right: 0 !important;
+	margin-top: -75px !important;
+}
+
+.orbit-container .orbit-prev, .orbit-container .orbit-next{
+	width: 48px !important;
+	height: 48px !important;
+}
+
+.orbit-container .orbit-next>span, .orbit-container .orbit-prev>span{
+	display: block !important;
+	border: 0 !important;
+	background: url(../images/arrows.png) 0 0;
+	margin:0 !important;
+    height: 48px !important;
+    width: 48px !important;
+	position: relative !important;
+	top: 0 !important;
+}
+
+.orbit-container .orbit-next>span{
+	left: 0 !important;
+	background-position: 0 -43px;
+}
+
+.orbit-container .orbit-prev>span{
+    background-position: 0 3px;	
 }

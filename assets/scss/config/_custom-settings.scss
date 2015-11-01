@@ -101,3 +101,18 @@ $topbar-button-font-size: .75rem;
 // Divider Styles
 $topbar-divider-border-bottom: solid 0 scale-color($topbar-bg-color, $lightness: 13%);
 $topbar-divider-border-top: solid 0 scale-color($topbar-bg-color, $lightness: -50%);
+
+//orbit
+
+// We use these to control the caption styles
+ $orbit-caption-bg: #e84a3d;
+ $orbit-caption-font-color: $white;
+ $orbit-caption-font-size: rem-calc(12);
+ $orbit-caption-position: "bottom"; // Supported values: "bottom", "under"
+ $orbit-caption-padding: rem-calc(22 28);
+ 
+ // We use these to control the left/righ
+  $orbit-nav-bg: #114e9c;
+  $orbit-nav-bg-hover: darken(#114e9c,0.3);
+  $orbit-nav-arrow-color: $white;
+  $orbit-nav-arrow-color-hover: $white;
