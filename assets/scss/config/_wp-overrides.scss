@@ -342,7 +342,20 @@ footer#footer{
 }
 
 .orbit-container .orbit-slides-container>* .orbit-caption{
-    bottom: 40px !important;
+    bottom: initial !important;
+	top:450px; 
+	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
+		top: 530px;
+	}
+	@media only screen and (min-width: 1640px) and (max-width: 1730px) {
+		top: 600px;
+	}
+	@media only screen and (min-width: 1731px) {
+		top: 675px;
+	}
+	@media only screen and (min-width: 117.063em) { 
+		top: 700px;
+	}
 	padding: 30px !important;
 	left: 20px;
     color: #fff;
@@ -380,3 +393,4 @@ footer#footer{
 .orbit-container .orbit-prev>span{
     background-position: 0 3px;	
 }
+
