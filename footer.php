@@ -19,8 +19,8 @@
   
   <div class="row row-x" id="contact-us">
     <div class="large-4 columns">
-      <h6 class="nm">© BLUEPRINT CAPITAL PARTNERS </h6>
-      <a href="#">Disclaimer</a>
+      <h6 class="nm">© BLUEPRINT INVESTMENTS LLC </h6>
+      <a href="/wordpress/disclaimer">Disclaimer</a>
     </div>
     <div class="large-8 columns">
       <p class="nm small-margin">We are located at 154 Grand Street New York, NY 10013. Phone. <a href="tel://+1 347 932 3575">+1.347.932.3575</a>  Email. <a href="mailto:info@blueprintcapitalpartners.com">info@blueprintcapitalpartners.com</a></p>
@@ -47,3 +47,5 @@
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
 </body>
 </html>
+
+

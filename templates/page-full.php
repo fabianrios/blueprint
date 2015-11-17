@@ -103,18 +103,14 @@ get_header(); ?>
         $json_portfolio = json_encode( $output );
     ?>
     <div class="info">
-      <h3>PORTFOLIO <span class="right">MAP <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/location.jpg" alt="" /> </span> </h3>
-      <ul class="no-bullet">
-        <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
+      <h3>PORTFOLIO <span class="right" id="click_map">MAP <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/location.jpg" alt="" /> </span> </h3>
+      <ul class="no-bullet map-points">
+        <?php $i = 0; foreach( $posts as $post ): setup_postdata($post);  ?>
           	<li class="uppercase">
-          		<?php the_title(); ?>
+          		<a href="<?php echo $i ?>"><?php the_title(); ?></a>
           	</li>
-        <?php endforeach; ?>
+			<?php $i++; endforeach; ?>
       </ul>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt neque ut risus imperdiet sagittis. Nunc venenatis euismod sem, id porta dolor. Nulla facilisi. Etiam quis urna nibh. 
-      </p>
-      <p>  Vestibulum sollicitudin pharetra congue. Sed felis tortor, faucibus quis tellus at, pharetra efficitur leo. Aenean arcu nisi, vehicula id diam a, volutpat iaculis orci. Sed porta felis nibh, eu tempus augue tempus sollicitudin. Donec bibendum pulvinar congue. Morbi ornare placerat maximus. Fusce nec ullamcorper tortor. Quisque sed lacus auctor, finibus massa non, commodo enim. Suspendisse egestas qodales aliquam rutrum. Nunc ut lorem non libero finibus tristique nec at sapien. Nulla bibendum dictum nunc, eu pretium nulla condimentum vel</p>
     </div>
     <div class="map">
       <div id="googleMap" class="allofthem" style="width:100%;"></div>
@@ -235,6 +231,26 @@ get_header(); ?>
   </div>
   <script>
   $(function() {
+	  
+	  
+	  $("#click_map").click(function(){
+		if(!$("#googleMap").is(':visible')) {
+		  	$(".galleries.allofthem").hide("fast");
+			$("#googleMap").show("fast");
+		}
+	  });
+	  
+	  $(".map-points a").on( "click", function( e ) {
+		  event.preventDefault();
+		  var a_href = $(this).attr('href');
+		  console.log(a_href);
+		  if($("#googleMap").is(':visible')) {
+		      $("#googleMap").hide("fast");
+		  }
+		  $(".galleries.allofthem").hide("fast");
+	      $("#"+a_href+"-gallery").show();
+	  });
+	  
 	  $(".accordion a").on( "click", function( e ) {
 	  	e.preventDefault();
 		var text = $(this).parent().children(".info-container");
@@ -246,7 +262,7 @@ get_header(); ?>
 		  var a_href = $(this).attr('href');
 		  if (a_href == "#investor-login"){return}
 		  $('html, body').animate({
-		     scrollTop: $(a_href).offset().top - 126
+		     scrollTop: $(a_href).offset().top - 120
 		  }, 1500);
 	      console.log( a_href );
 	  });
@@ -370,15 +386,16 @@ get_header(); ?>
   
   <?php }else{ ?>
   
-  <div class"homefront">
+  <div class="pages-container">
   	<?php /* Start loop */ ?>
   	<?php while ( have_posts() ) : the_post(); ?>
   		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-  			<header>
-  				<h1 class="entry-title"><?php the_title(); ?></h1>
-  			</header>
   			<div class="entry-content">
-  				<?php the_content(); ?>
+				<div class="row row-x">
+					<div class="large-12 columns">
+						<?php the_content(); ?>	
+					</div>
+				</div>
   			</div>
   			<footer>
   				<?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>

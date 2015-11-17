@@ -12,6 +12,9 @@ $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
+$anchor-font-color: #114E9C;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+
 // Foundation color naming conventions
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;

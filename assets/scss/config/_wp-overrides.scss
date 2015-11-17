@@ -24,6 +24,9 @@ p.wp-caption-text{
 	color: #fff;
 }
 
+.portfolio{
+	width: 100%;
+}
 
 .homefront{
   position: relative;
@@ -40,6 +43,7 @@ p.wp-caption-text{
     position: relative;
     color: #fff;
 	top: 400px;
+	line-height: 35px;
 	@media only screen and (min-width: 40.063em) { 
 	    top: 600px;
 	}
@@ -135,7 +139,7 @@ p.wp-caption-text{
 }
 
 .primer_texto{
-  font-size: .9em;
+  font-size: .85em;
 }
 
  @media only screen and (min-width: 1731px) {
@@ -159,6 +163,7 @@ footer#footer{
   p{
     color: #8d8d8d;
     font-size: 13px;
+	line-height: 20px;
   }
   a{
     color: #fff;
@@ -171,6 +176,11 @@ footer#footer{
    @media only screen and (min-width: 720px) {
 	   text-align: left;
    }
+}
+
+.pages-container{
+	padding: 50px;
+	min-height: 720px;
 }
 
 .small-portfolio{
@@ -218,6 +228,13 @@ footer#footer{
 	}
 }
 
+#click_map{
+	cursor:pointer;
+	&:hover{
+		color: darken(#fff,10%);
+	}
+}
+
 .info{
   display: inline-block;
   background: #1e2531;
@@ -248,6 +265,12 @@ footer#footer{
       color: #818388;
       padding: 20px 0;
       border-bottom: 1px solid #353b46;
+	  a{
+	  	color: #818388;
+		&:hover{
+			color: darken(#818388,10%);
+		}
+	  }
     }
   }
 }
