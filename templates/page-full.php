@@ -204,7 +204,7 @@ get_header(); ?>
           	<li class="uppercase linkable">
           		<a href="#"><?php the_title(); ?> <span class="fa fa-chevron-down right"></span></a>
 				<div class="info-container">
-				  <img src="<?php echo get_field('image_1')['sizes']['medium'];  ?>" alt="" />
+				  <img src="<?php echo get_field('image_mobile')['url'];  ?>" alt="" />
   				  <ul class="no-bullet">
 					  <li><h6><?php the_title(); ?></h6></li>
   					  <li><strong>TYPE:</strong> <?php the_field('type'); ?></li>
@@ -253,16 +253,26 @@ get_header(); ?>
 	  
 	  $(".accordion a").on( "click", function( e ) {
 	  	e.preventDefault();
-		var text = $(this).parent().children(".info-container");
-		// console.log(text);
-		text.slideToggle();
+  		var text = $(this).parent().children(".info-container");
+  		text.slideToggle();
 	  });
+    
 	  $( "#menu-main a" ).on( "click", function( event ) {
 	      event.preventDefault();
 		  var a_href = $(this).attr('href');
 		  if (a_href == "#investor-login"){return}
 		  $('html, body').animate({
-		     scrollTop: $(a_href).offset().top - 120
+		     scrollTop: $(a_href).offset().top - 110
+		  }, 1500);
+	      console.log( a_href );
+	  });
+    
+	  $( "#mobile-menu a" ).on( "click", function( event ) {
+	      event.preventDefault();
+		  var a_href = $(this).attr('href');
+		  if (a_href == "#investor-login"){return}
+		  $('html, body').animate({
+		     scrollTop: $(a_href).offset().top - 110
 		  }, 1500);
 	      console.log( a_href );
 	  });

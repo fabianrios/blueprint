@@ -23,15 +23,14 @@
  <div class="row">
  	<div class="small-8 small-centered columns">
 		<br /><br /><br />
- 		 <ul>
- 			<li><a href="">STRATEGY</a></li>
- 			<li><a href="">ABOUT US</a></li>
- 			<li><a href="">CONTACT US</a></li>
- 			<li><a href="">PORTFOLIO</a></li>
+ 		 <ul id="mobile-menu">
+ 			<li><a href="#our-firm">OUR FIRM</a></li>
+ 			<li><a href="#portfolio">PORTFOLIO</a></li>
+ 			<li><a href="#contact-us">CONTACT US</a></li>
  		</ul>
  		<hr />
  		<ul>
- 			<li><a href="#">CLIENT LOGIN</a></li>
+ 			<li><a href="#investor-login">INVESTOR LOGIN</a></li>
  		</ul>
  	</div>
  </div>
