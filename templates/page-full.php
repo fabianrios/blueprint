@@ -89,7 +89,7 @@ get_header(); ?>
     <img src="<?php echo $image_big['url']; ?>" alt="<?php echo $image_big['alt']; ?>" />
   </div>
   
-  <div class="portfolio trim-small">
+  <div class="portfolio trim-small" id="portfolio">
     <?php
         global $post;
         $args = array( 'numberposts' => 10, 'category_name' => 'portfolio' );
@@ -204,6 +204,27 @@ get_header(); ?>
   
   <script>
   $(function() {
+	  
+	  $( "#menu-main a" ).on( "click", function( event ) {
+	      event.preventDefault();
+		  var a_href = $(this).attr('href');
+		  if (a_href == "#investor-login"){return}
+		  // var where = 0;
+		  // switch (a_href){
+		  // case '#our-firm':
+		  // 			  where = 0;
+		  // 			  break;
+		  // case '#portfolio':
+		  // 			  break;
+		  // default:
+		  // 			  where = a_href
+		  // }
+		  $('html, body').animate({
+		     scrollTop: $(a_href).offset().top - 100
+		  }, 2000);
+	      console.log( a_href );
+	  });
+	  
       $(".closing").click(function(e){
         e.preventDefault();
         $(".allofthem").hide("fast");

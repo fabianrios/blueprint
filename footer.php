@@ -17,7 +17,7 @@
 	<?php // dynamic_sidebar( 'footer-widgets' ); ?>
 	<?php // do_action( 'foundationpress_after_footer' ); ?>
   
-  <div class="row row-x">
+  <div class="row row-x" id="contact-us">
     <div class="large-4 columns">
       <h6 class="nm">© BLUEPRINT CAPITAL PARTNERS </h6>
       <a href="#">Disclaimer</a>

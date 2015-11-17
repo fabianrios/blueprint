@@ -42,7 +42,7 @@
 	<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
 
 	<div class="off-canvas-wrap" data-offcanvas>
-	<div class="inner-wrap">
+	<div class="inner-wrap" id="our-firm">
 	<?php endif; ?>
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
