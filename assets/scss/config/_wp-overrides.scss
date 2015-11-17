@@ -46,6 +46,13 @@ p.wp-caption-text{
   }
 }
 
+.trim-big{
+	display: block !important;
+	@media only screen and (min-width: 40.063em) { 
+		display: none !important;
+	}
+}
+
 .trim-small{
 	display: none !important;
 	@media only screen and (min-width: 40.063em) { 
@@ -131,15 +138,24 @@ p.wp-caption-text{
   font-size: .9em;
 }
 
-.row{
-  &.row-x{
-   min-width: 90.63rem; 
-  }
+ @media only screen and (min-width: 1731px) {
+	.row{
+	  &.row-x{
+	   min-width: 90.63rem; 
+	  }
+	}
+}
+
+@media only screen and (max-width: 720px) {
+.small-margin{
+	margin-top: 30px;
+}
 }
 
 footer#footer{
   padding: 50px 0;
   background: black;
+  text-align: center;
   p{
     color: #8d8d8d;
     font-size: 13px;
@@ -152,6 +168,54 @@ footer#footer{
     font-size: .9em;
     color: #8d8d8d;
   }
+   @media only screen and (min-width: 720px) {
+	   text-align: left;
+   }
+}
+
+.small-portfolio{
+    background: #1e2531;
+	position: relative;
+	top: -3px;
+	padding-bottom: 30px;
+    h3{
+	  padding: 20px;
+      color: #fff;
+      text-transform: uppercase;
+	  border-bottom: 1px solid #353b46;
+    }
+    p{
+      color: #818388;
+    }
+    ul.accordion{
+      li.linkable{
+		  a{
+			  display: block;
+	          padding: 20px;
+	          border-bottom: 1px solid #353b46;
+	          color: #818388;
+		  		&.active{
+		  			color: #fff;
+		  		}	
+		  }
+      }
+    }
+	.info-container{
+		display: none;
+		background: white;
+		padding: -20px;
+		ul.no-bullet{
+			padding: 20px 30px;
+			margin: 0;
+			li{
+			    font-size: 80%;
+			    margin: 5px 0;
+			}
+		}
+		img{
+			width: 100%;
+		}
+	}
 }
 
 .info{

@@ -201,27 +201,53 @@ get_header(); ?>
       <?php endforeach; ?>
     </div>
   </div>
-  
+  <div class="small-portfolio trim-big">
+      <h3>PORTFOLIO</h3>
+      <ul class="no-bullet accordion">
+        <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
+          	<li class="uppercase linkable">
+          		<a href="#"><?php the_title(); ?> <span class="fa fa-chevron-down right"></span></a>
+				<div class="info-container">
+				  <img src="<?php echo get_field('image_1')['sizes']['medium'];  ?>" alt="" />
+  				  <ul class="no-bullet">
+					  <li><h6><?php the_title(); ?></h6></li>
+  					  <li><strong>TYPE:</strong> <?php the_field('type'); ?></li>
+  					  <li><strong>LOCATION:</strong> <?php the_field('location'); ?></li>
+  					  <li><strong>FLOORS:</strong> <?php the_field('floors'); ?></li>
+  					  <li><strong>UNITS:</strong> <?php the_field('units'); ?></li>
+  					  <li><strong>SIZE:</strong> <?php the_field('size'); ?></li>
+  					  <li><strong>STATUS:</strong> 
+  						  <?php
+  						    $status = get_field('status');
+  							   if($status == 1){
+  								   $output = "Active";
+  							   }else{
+  								   $output = "Finish";
+  							   }
+  							   echo $output;
+  						   ?>
+  					   </li>
+  			      </ul>
+				</div>
+          	</li>
+        <?php endforeach; ?>
+      </ul>
+  </div>
   <script>
   $(function() {
-	  
+	  $(".accordion a").on( "click", function( e ) {
+	  	e.preventDefault();
+		var text = $(this).parent().children(".info-container");
+		// console.log(text);
+		text.slideToggle();
+	  });
 	  $( "#menu-main a" ).on( "click", function( event ) {
 	      event.preventDefault();
 		  var a_href = $(this).attr('href');
 		  if (a_href == "#investor-login"){return}
-		  // var where = 0;
-		  // switch (a_href){
-		  // case '#our-firm':
-		  // 			  where = 0;
-		  // 			  break;
-		  // case '#portfolio':
-		  // 			  break;
-		  // default:
-		  // 			  where = a_href
-		  // }
 		  $('html, body').animate({
-		     scrollTop: $(a_href).offset().top - 100
-		  }, 2000);
+		     scrollTop: $(a_href).offset().top - 126
+		  }, 1500);
 	      console.log( a_href );
 	  });
 	  
