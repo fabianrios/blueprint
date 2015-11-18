@@ -254,6 +254,7 @@ get_header(); ?>
 	  $(".accordion a").on( "click", function( e ) {
 	  	e.preventDefault();
   		var text = $(this).parent().children(".info-container");
+      $(".info-container").hide("fast");
   		text.slideToggle();
 	  });
     
