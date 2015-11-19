@@ -111,8 +111,8 @@ p.wp-caption-text{
 		h4{
 			font-size: 20px;
 		}
-		.primer_texto{
-		  font-size: .9em;
+		.primer_texto{ 
+		  font-size: .82em;
 		}
 	}
 	@media only screen and (min-width: 90.063em) {
@@ -126,7 +126,7 @@ p.wp-caption-text{
     		  font-size: 25px;
     	  }
 		  .primer_texto{
-		    font-size: 1em;
+		    font-size: .95em;
 		  }
 	} 
     &.redbg{
@@ -474,3 +474,24 @@ footer#footer{
     background-position: 0 3px;	
 }
 
+.downarrow{
+    display: inline-block;
+    height: 70px;
+    width: 90px;
+    font-size: 50px;
+    border-right: 1px solid lightgray;
+    text-align: center;
+}
+
+.info-download{
+   display: inline-block;
+   margin-left: 15px;
+}
+
+ul.downloads{
+	li{
+	  margin:0;
+	  border-top: 1px solid lightgray;
+	  padding: 15px 0;
+	}
+}

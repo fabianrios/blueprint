@@ -21,18 +21,17 @@
   </div>
   
  <div class="row">
- 	<div class="small-8 small-centered columns">
+ 	<div class="small-9 small-centered columns">
 		<br /><br /><br />
  		 <ul id="mobile-menu">
  			<li><a href="#our-firm">OUR FIRM</a></li>
- 			<li><a href="#portfolio">PORTFOLIO</a></li>
+ 			<li><a href="#movil-portfolio">PORTFOLIO</a></li>
  			<li><a href="#contact-us">CONTACT US</a></li>
- 		</ul>
- 		<hr />
- 		<ul>
- 			<li><a href="#investor-login">INVESTOR LOGIN</a></li>
+			<hr />
+			<li><a href="#investor-login" id="menu-item-53">INVESTOR LOGIN</a></li>
  		</ul>
  	</div>
  </div>
   
 </div>
+

@@ -197,7 +197,7 @@ get_header(); ?>
       <?php endforeach; ?>
     </div>
   </div>
-  <div class="small-portfolio trim-big">
+  <div class="small-portfolio trim-big" id="movil-portfolio">
       <h3>PORTFOLIO</h3>
       <ul class="no-bullet accordion">
         <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
@@ -271,11 +271,15 @@ get_header(); ?>
 	  $( "#mobile-menu a" ).on( "click", function( event ) {
 	      event.preventDefault();
 		  var a_href = $(this).attr('href');
-		  if (a_href == "#investor-login"){return}
+		  console.log( a_href );
+		  if (a_href == "#investor-login"){
+			  $('#menu').foundation('reveal', 'close');
+			  return
+		  }
 		  $('html, body').animate({
 		     scrollTop: $(a_href).offset().top - 110
 		  }, 1500);
-	      console.log( a_href );
+		  $('#menu').foundation('reveal', 'close');
 	  });
 	  
       $(".closing").click(function(e){
@@ -323,7 +327,7 @@ get_header(); ?>
     ]
 
     var mapOptions = {
-      zoom: 7,
+      zoom: 13,
       scrollwheel: false,
       center: new google.maps.LatLng(parseFloat(locations[0]["long"]), parseFloat(locations[0]["lat"])),
       mapTypeControlOptions: {
@@ -366,14 +370,6 @@ get_header(); ?>
             console.log(marker, i);
             $("#googleMap").hide("fast");
             $("#"+i+"-gallery").show();
-            // if (marker.getAnimation() !== null) {
-            //    marker.setAnimation(null);
-            //  } else {
-            //    marker.setAnimation(google.maps.Animation.BOUNCE);
-            //  }
-            // var contentString = locations[i]["title"];
-            // infowindow.setContent(contentString);
-            // infowindow.open(map, marker);
           }
         })(marker, i));
       }

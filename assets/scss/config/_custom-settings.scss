@@ -71,7 +71,7 @@ $topbar-link-bg-color-hover: $jet;
 $topbar-link-bg-active: $jet;
 $topbar-link-bg-active-hover: scale-color($jet, $lightness: -14%);
 
-$topbar-bg-color: #204FA1;
+$topbar-bg-color: #2150A0;
 $topbar-bg: $topbar-bg-color;
 
 $topbar-height: rem-calc(96);$medium-breakpoint: em-calc(1024);
@@ -115,7 +115,7 @@ $topbar-divider-border-top: solid 0 scale-color($topbar-bg-color, $lightness: -5
  $orbit-caption-padding: rem-calc(22 28);
  
  // We use these to control the left/righ
-  $orbit-nav-bg: #204FA1;
-  $orbit-nav-bg-hover: darken(#204FA1,0.3);
+  $orbit-nav-bg: #2150A0;
+  $orbit-nav-bg-hover: darken(#2150A0,0.3);
   $orbit-nav-arrow-color: $white;
   $orbit-nav-arrow-color-hover: $white;
