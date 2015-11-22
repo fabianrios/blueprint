@@ -203,7 +203,7 @@ get_header(); ?>
         <?php  foreach( $posts as $post ): setup_postdata($post);  ?>
           	<li class="uppercase linkable">
           		<a href="#"><?php the_title(); ?> <span class="fa fa-chevron-down right"></span></a>
-				<div class="info-container">
+				<div class="info-container info-all">
 				  <img src="<?php echo get_field('image_mobile')['url'];  ?>" alt="" />
   				  <ul class="no-bullet">
 					  <li><h6><?php the_title(); ?></h6></li>
@@ -254,7 +254,12 @@ get_header(); ?>
 	  $(".accordion a").on( "click", function( e ) {
 	  	e.preventDefault();
   		var text = $(this).parent().children(".info-container");
-      $(".info-container").hide("fast");
+      var icon = $(this).children(".fa");
+      if (!text.is(':visible')){
+        $(".info-all").hide("fast");
+      }
+      icon.toggleClass("fa-chevron-down");
+      icon.toggleClass("fa-chevron-up");
   		text.slideToggle();
 	  });
     
@@ -327,7 +332,7 @@ get_header(); ?>
     ]
 
     var mapOptions = {
-      zoom: 13,
+      zoom: 15,
       scrollwheel: false,
       center: new google.maps.LatLng(parseFloat(locations[0]["long"]), parseFloat(locations[0]["lat"])),
       mapTypeControlOptions: {
