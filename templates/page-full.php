@@ -332,9 +332,9 @@ get_header(); ?>
     ]
 
     var mapOptions = {
-      zoom: 15,
+      zoom: 18,
       scrollwheel: false,
-      center: new google.maps.LatLng(parseFloat(locations[0]["long"]), parseFloat(locations[0]["lat"])),
+      center: new google.maps.LatLng(parseFloat(locations[1]["long"]), parseFloat(locations[1]["lat"])),
       mapTypeControlOptions: {
         mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
       }

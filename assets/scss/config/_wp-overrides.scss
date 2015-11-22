@@ -32,7 +32,7 @@ p.wp-caption-text{
   position: relative;
   display: block;
   background: url(../images/home_mapa.jpg) no-repeat center center;
-  height: 586px;
+  height: 500px;
   @media only screen and (min-width: 40.063em) { 
 	-webkit-background-size: 100%;
 	background-size: 100%;
@@ -42,7 +42,7 @@ p.wp-caption-text{
     text-transform: uppercase;
     position: relative;
     color: #fff;
-	top: 400px;
+	top: 250px;
 	line-height: 35px;
 	@media only screen and (min-width: 40.063em) { 
 	    top: 600px;
@@ -76,20 +76,20 @@ p.wp-caption-text{
   }
   &.original{
 	@media only screen and (min-width: 40.063em) { 
-	    max-height: 725px;
+	    max-height: 745px;
 	    overflow: hidden;
 	}
 	@media only screen and (min-width: 1472px) and (max-width: 1639px) {
-		max-height: 750px;
+		max-height: 770px;
 	}
 	@media only screen and (min-width: 1640px) and (max-width: 1730px) {
-		max-height: 820px;
+		max-height: 840px;
 	}
 	@media only screen and (min-width: 1731px) {
-		max-height: 900px;
+		max-height: 920px;
 	}
 	@media only screen and (min-width: 117.063em) { 
-		max-height: 990px;
+		max-height: 1020px;
 	}
   }
   &.orangebg{
@@ -131,11 +131,19 @@ p.wp-caption-text{
 	} 
     &.redbg{
       background: #e84a3d;
+	  margin-bottom: -3px;
     }
   }
   img{
     width: 100%;
   }
+}
+
+.entry-content{
+	p{
+		font-size: .9rem;
+		line-height: 1.7;
+	}
 }
 
 .primer_texto{
@@ -145,8 +153,8 @@ p.wp-caption-text{
  @media only screen and (min-width: 1024px) {
 	.row{ 
 	  &.row-x{ 
-	   min-width: 90.63rem; 
-     padding: 0 10px;
+	   max-width: 115.63rem; 
+       padding: 0 10px;
 	  }
 	}
 }
@@ -186,9 +194,6 @@ footer#footer{
 
 .small-portfolio{
     background: #1e2531;
-	position: relative;
-	top: -3px;
-	padding-bottom: 30px;
     h3{
 	  padding: 20px;
       color: #fff;
@@ -340,7 +345,7 @@ footer#footer{
 .arrow{
   text-transform: uppercase;
   position: relative;
-  top: 420px;
+  top: 260px;
 	@media only screen and (min-width: 40.063em) { 
 	    top: 630px;
 	}
@@ -377,6 +382,9 @@ footer#footer{
 	padding: 15px 20px;
 	@media only screen and (min-width: 40.063em) { 
 	display: none;
+	}
+	img.the-logo{
+		position: relative;
 	}
 }
 

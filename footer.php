@@ -23,9 +23,11 @@
       <a href="/wordpress/disclaimer">Disclaimer</a>
     </div>
     <div class="large-8 columns">
-      <p class="nm small-margin">We are located at 154 Grand Street New York, NY 10013. Phone. <a href="tel://+1 347 932 3575">+1.347.932.3575</a>  Email. <a href="mailto:info@blueprintcapitalpartners.com">info@blueprintcapitalpartners.com</a></p>
-      <p class="nm">For investment inquiries and general information, please email <a href="mailto:info@blueprintcp.com">info@blueprint.cp </a> </p>
-      <p class="nm small-margin">For leasing inquiries, contact peoperty manager <a href="mailto:info@blueprintcapitalpartners.com">Joseph A. Del Forno Inc</a>. at <a href="tel://+1 201 432 7000">+1.201.432.7000</a> </p>
+<div class="right">
+	<p class="nm small-margin">We are located at 154 Grand Street New York, NY 10013. Phone. <a href="tel://+1 347 932 3575">+1.347.932.3575</a>  Email. <a href="mailto:info@blueprintcapitalpartners.com">info@blueprintcapitalpartners.com</a></p>
+	<p class="nm">For investment inquiries and general information, please email <a href="mailto:info@blueprintcp.com">info@blueprint.cp </a> </p>
+	<p class="nm small-margin">For leasing inquiries, contact peoperty manager <a href="mailto:info@blueprintcapitalpartners.com">Joseph A. Del Forno Inc</a>. at <a href="tel://+1 201 432 7000">+1.201.432.7000</a> </p>
+</div>
     </div>
   </div>
   

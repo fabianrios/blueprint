@@ -10,7 +10,7 @@
 ?>
 
 <div class="nav-header">
-	<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo_movil.jpg" alt="" />
+	<img class="the-logo" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo_movil.jpg" alt="" />
 	<a href="#" class="tree right" data-reveal-id="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/tree.jpg" alt="" /></a>
 </div>
 
