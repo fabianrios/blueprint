@@ -12,14 +12,12 @@ get_header(); ?>
   	<?php /* Start loop */ ?>
   	<?php while ( have_posts() ) : the_post(); ?>
   	
-  	<div class="row">
-  	  <div class="large-8 columns large-centered">
-        <?php the_content(); ?>
-        <div class="text-center">
-          <img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow.png" alt="" />
-        </div>
-      </div>
-  	</div>
+    <div class="initial-content">
+	  <div class="text-center centerize">
+	  	<?php the_content(); ?>
+	  	<img class="arrow" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow.png" alt="" />
+	  </div>
+    </div>
     
   	<?php endwhile; // End the loop ?>
   </div>
@@ -119,6 +117,7 @@ get_header(); ?>
           <div id="<?php echo $i ?>-gallery" class="galleries allofthem">
             <a class="closing">X</a>
             <ul class="project-orbit" data-orbit data-options="bullets:false;slide_number:false;timer:false;">
+		    <?php if( get_field('image_1')['url'] ): ?>
             <li>
               <img src="<?php echo get_field('image_1')['url'];  ?>" alt="" />
 			  <div class="orbit-caption">
@@ -143,6 +142,7 @@ get_header(); ?>
 			      </ul>
 			  </div>
             </li>
+			<?php endif; if( get_field('image_2')['url'] ): ?>
             <li>
               <img src="<?php echo get_field('image_2')['url'];  ?>" alt="" />
 			  <div class="orbit-caption">
@@ -167,6 +167,7 @@ get_header(); ?>
 			      </ul>
 			  </div>
             </li>
+			<?php endif; if( get_field('image_3')['url'] ):  ?>
             <li>
               <img src="<?php echo get_field('image_3')['url'];  ?>" alt="" />
 			  <div class="orbit-caption">
@@ -191,6 +192,7 @@ get_header(); ?>
 			      </ul>
 			  </div>
             </li>
+		    <?php  endif; ?>
             </ul>
           </div>
         <?php $i = $i+1; ?>
@@ -243,12 +245,22 @@ get_header(); ?>
 	  $(".map-points a").on( "click", function( e ) {
 		  event.preventDefault();
 		  var a_href = $(this).attr('href');
-		  console.log(a_href);
+		  // console.log(a_href);
 		  if($("#googleMap").is(':visible')) {
 		      $("#googleMap").hide("fast");
 		  }
-		  $(".galleries.allofthem").hide("fast");
-	      $("#"+a_href+"-gallery").show();
+		  if(!$("#"+a_href+"-gallery").is(':visible')) {
+			 $(".galleries.allofthem").hide("fast");
+		     $("#"+a_href+"-gallery").show();
+	   		  var child = $("#"+a_href+"-gallery").children(".orbit-container").children("ul.project-orbit").children("li").length;
+	   		  console.log(child);
+	   		  if (child < 2){
+	   			  $(".orbit-prev, .orbit-next").css({"display":"none"});
+	   		  }else{
+	      		  $(".orbit-prev, .orbit-next").css({"display":"block"});
+	   		  }
+		  }
+		  
 	  });
 	  
 	  $(".accordion a").on( "click", function( e ) {
@@ -276,7 +288,7 @@ get_header(); ?>
 	  $( "#mobile-menu a" ).on( "click", function( event ) {
 	      event.preventDefault();
 		  var a_href = $(this).attr('href');
-		  console.log( a_href );
+		  // console.log( a_href );
 		  if (a_href == "#investor-login"){
 			  $('#menu').foundation('reveal', 'close');
 			  return
@@ -332,7 +344,7 @@ get_header(); ?>
     ]
 
     var mapOptions = {
-      zoom: 18,
+      zoom: 17,
       scrollwheel: false,
       center: new google.maps.LatLng(parseFloat(locations[1]["long"]), parseFloat(locations[1]["lat"])),
       mapTypeControlOptions: {
@@ -372,9 +384,15 @@ get_header(); ?>
 
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
           return function() {
-            console.log(marker, i);
             $("#googleMap").hide("fast");
             $("#"+i+"-gallery").show();
+	   		  var child = $("#"+i+"-gallery").children(".orbit-container").children("ul.project-orbit").children("li").length;
+              console.log(marker, i, child);
+	   		  if (child < 2){
+	   			  $(".orbit-prev, .orbit-next").css({"display":"none"});
+	   		  }else{
+	      		  $(".orbit-prev, .orbit-next").css({"display":"block"});
+	   		  }
           }
         })(marker, i));
       }
